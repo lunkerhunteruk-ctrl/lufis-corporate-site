@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-accent: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-cream: #faf8f5;
+  --color-ink: #2d2d2d;
+
+  --font-display: var(--font-playfair-display);
+  --font-body: var(--font-noto-sans-jp);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf8f5;
+  color: #1a1a1a;
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Ink texture background decoration */
+.ink-texture {
+  position: relative;
+}
+
+.ink-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse at 20% 50%,
+      rgba(45, 45, 45, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(45, 45, 45, 0.02) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 50% 80%,
+      rgba(45, 45, 45, 0.02) 0%,
+      transparent 50%
+    );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section fade-in animation helper */
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 3px;
+}
+
+/* Selection color */
+::selection {
+  background: #2d2d2d;
+  color: #faf8f5;
+}
