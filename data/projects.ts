@@ -18,7 +18,7 @@ export const projects: Project[] = [
       "AIが冷蔵庫の食材からレシピを提案。写真を撮るだけで献立が決まるスマートレシピアプリ。",
     period: "2024.06 - 2024.09",
     tags: ["Next.js", "OpenAI API", "Stripe", "Supabase"],
-    thumbnail: "/images/pitareci.svg",
+    thumbnail: "/screenshots/01.png",
     url: "https://lufis.co.jp/pitareci/",
   },
   {

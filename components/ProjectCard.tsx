@@ -18,15 +18,23 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className="group cursor-pointer"
     >
       {/* Thumbnail */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-accent">
-        <div
-          className="flex h-full w-full items-center justify-center transition-all duration-700 grayscale group-hover:grayscale-0"
-          style={{ background: `linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)` }}
-        >
-          <span className="font-display text-3xl font-bold text-secondary/20 transition-colors duration-700 group-hover:text-secondary/70">
-            {project.name}
-          </span>
-        </div>
+      <div className={`relative overflow-hidden bg-accent ${project.thumbnail.includes('screenshots') ? 'aspect-[3/5]' : 'aspect-[4/3]'}`}>
+        {project.thumbnail.includes('screenshots') ? (
+          <img
+            src={project.thumbnail}
+            alt={project.name}
+            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="flex h-full w-full items-center justify-center transition-all duration-700 grayscale group-hover:grayscale-0"
+            style={{ background: `linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)` }}
+          >
+            <span className="font-display text-3xl font-bold text-secondary/20 transition-colors duration-700 group-hover:text-secondary/70">
+              {project.name}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Info */}
