@@ -40,5 +40,6 @@ export const projects: Project[] = [
     period: "2025.02 - 2025.05",
     tags: ["Next.js", "LINE LIFF", "Firebase", "Tailwind"],
     thumbnail: "/images/marchelink-thumb.png",
+    url: "https://marche-link.jp/admin-entry/",
   },
 ];
