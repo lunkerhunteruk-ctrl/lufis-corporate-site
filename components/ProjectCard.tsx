@@ -18,8 +18,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className="group cursor-pointer"
     >
       {/* Thumbnail */}
-      <div className={`relative overflow-hidden bg-accent ${project.thumbnail.includes('screenshots') ? 'aspect-[3/5]' : 'aspect-[4/3]'}`}>
-        {project.thumbnail.includes('screenshots') ? (
+      <div className={`relative overflow-hidden bg-accent ${project.thumbnail.endsWith('.png') ? 'aspect-[3/5]' : 'aspect-[4/3]'}`}>
+        {project.thumbnail.endsWith('.png') ? (
           <img
             src={project.thumbnail}
             alt={project.name}

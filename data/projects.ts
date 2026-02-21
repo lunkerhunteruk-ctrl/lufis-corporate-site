@@ -39,6 +39,6 @@ export const projects: Project[] = [
       "生産者と消費者をつなぐマルシェプラットフォーム。EC機能とコミュニティを融合。",
     period: "2025.02 - 2025.05",
     tags: ["Next.js", "LINE LIFF", "Firebase", "Tailwind"],
-    thumbnail: "/images/marchelink.svg",
+    thumbnail: "/images/marchelink-thumb.png",
   },
 ];
