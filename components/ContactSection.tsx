@@ -2,8 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import InkBlot from "./InkBlot";
-
+import CircleBrush from "./CircleBrush";
 export default function ContactSection() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
@@ -39,15 +38,14 @@ export default function ContactSection() {
       id="contact"
       className="ink-texture relative overflow-hidden bg-cream py-32"
     >
-      <InkBlot variant="center" className="w-[500px] h-[500px]" />
-
+      <CircleBrush />
       <div className="section-content mx-auto max-w-2xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-display text-sm uppercase tracking-[0.3em] text-muted"
+          className="font-display text-sm uppercase tracking-[0.3em] text-primary/70"
         >
           Contact
         </motion.p>
@@ -67,7 +65,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 font-body text-sm leading-relaxed text-muted"
+          className="mt-6 font-body text-sm leading-relaxed text-primary/70"
         >
           プロジェクトのご相談、お見積もりなどお気軽にお問い合わせください。
         </motion.p>
@@ -97,7 +95,7 @@ export default function ContactSection() {
             <div>
               <label
                 htmlFor="name"
-                className="font-body text-xs uppercase tracking-widest text-muted"
+                className="font-body text-xs uppercase tracking-widest text-primary/70"
               >
                 お名前
               </label>
@@ -113,7 +111,7 @@ export default function ContactSection() {
             <div>
               <label
                 htmlFor="company"
-                className="font-body text-xs uppercase tracking-widest text-muted"
+                className="font-body text-xs uppercase tracking-widest text-primary/70"
               >
                 会社名
               </label>
@@ -128,7 +126,7 @@ export default function ContactSection() {
             <div>
               <label
                 htmlFor="email"
-                className="font-body text-xs uppercase tracking-widest text-muted"
+                className="font-body text-xs uppercase tracking-widest text-primary/70"
               >
                 メールアドレス
               </label>
@@ -144,7 +142,7 @@ export default function ContactSection() {
             <div>
               <label
                 htmlFor="message"
-                className="font-body text-xs uppercase tracking-widest text-muted"
+                className="font-body text-xs uppercase tracking-widest text-primary/70"
               >
                 ご相談内容
               </label>

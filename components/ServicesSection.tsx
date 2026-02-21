@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import InkBlot from "./InkBlot";
 
 const services = [
   {
@@ -9,25 +8,26 @@ const services = [
     titleEn: "Rapid MVP",
     price: "1.5M JPY〜",
     description:
-      "アイデアから動くプロダクトまで最短4週間。デザイン・フロントエンド・バックエンド・決済まで一気通貫で構築。",
+      "アイデアから動くプロダクトまで最短2週間。デザイン・フロントエンド・バックエンド・決済まで一気通貫で構築。",
     features: [
       "UI/UXデザイン",
       "フロントエンド開発",
-      "バックエンド・API構築",
-      "決済システム統合",
-      "デプロイ・運用サポート",
+      "Cloud Functions構築",
+      "Stripe Connect決済",
+      "LINE LIFF認証",
+      "外部API・iCal連携",
     ],
   },
   {
     title: "AI機能開発",
     titleEn: "AI Integration",
-    price: "800K JPY〜",
+    price: "1M JPY〜",
     description:
-      "既存サービスへのAI機能追加。GPT/Claude API統合、画像認識、レコメンドエンジンなど。",
+      "既存サービスへのAI機能追加。GPT/Claude/Vertex AI統合、画像分析・品質管理、自動診断システムなど。",
     features: [
       "LLM API統合",
-      "画像認識・生成",
-      "レコメンドシステム",
+      "Vertex AI画像分析",
+      "AI品質管理・自動診断",
       "チャットボット構築",
       "プロンプト設計",
     ],
@@ -35,7 +35,7 @@ const services = [
   {
     title: "デザインコンサル",
     titleEn: "Design Consulting",
-    price: "500K JPY〜",
+    price: "800K JPY〜",
     description:
       "ハイファッションで培った審美眼で、プロダクトのUI/UXを根本から見直し。ブランディングからUIまで。",
     features: [
@@ -59,8 +59,6 @@ export default function ServicesSection() {
       id="services"
       className="ink-texture relative overflow-hidden bg-primary py-32 text-secondary"
     >
-      <InkBlot variant="bottom-left" className="w-[600px] h-[600px] opacity-[0.06]" />
-
       <div className="section-content mx-auto max-w-6xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -114,9 +112,9 @@ export default function ServicesSection() {
                 {service.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 font-body text-xs text-gray-500"
+                    className="flex items-center gap-2 font-body text-xs text-gray-500 transition-colors duration-200 hover:text-gray-200 cursor-default"
                   >
-                    <span className="h-px w-3 bg-gray-600" />
+                    <span className="h-px w-3 bg-gray-600 transition-colors duration-200 group-hover:bg-gray-400" />
                     {feature}
                   </li>
                 ))}

@@ -26,19 +26,19 @@ export const projects: Project[] = [
     name: "Mapika",
     nameJa: "マピカ",
     description:
-      "位置情報を活用したインタラクティブマップサービス。地域情報をリアルタイムで可視化。",
+      "民泊ホスト向け清掃クルーマッチングプラットフォーム。AI品質管理、Stripe決済、iCal自動連携で運営を効率化。",
     period: "2024.10 - 2025.01",
-    tags: ["React", "Mapbox GL", "Node.js", "PostgreSQL"],
+    tags: ["LINE LIFF", "Firebase", "Stripe Connect", "Vertex AI"],
     thumbnail: "/images/mapika.svg",
   },
   {
     id: "marchelink",
-    name: "MarcheLink",
+    name: "Marche-Link",
     nameJa: "マルシェリンク",
     description:
       "生産者と消費者をつなぐマルシェプラットフォーム。EC機能とコミュニティを融合。",
     period: "2025.02 - 2025.05",
-    tags: ["Next.js", "Stripe Connect", "Firebase", "Tailwind"],
+    tags: ["Next.js", "LINE LIFF", "Firebase", "Tailwind"],
     thumbnail: "/images/marchelink.svg",
   },
 ];

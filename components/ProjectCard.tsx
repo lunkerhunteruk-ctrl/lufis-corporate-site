@@ -23,7 +23,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           className="flex h-full w-full items-center justify-center transition-all duration-700 grayscale group-hover:grayscale-0"
           style={{ background: `linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)` }}
         >
-          <span className="font-display text-3xl font-bold text-secondary/20 transition-colors duration-700 group-hover:text-secondary/40">
+          <span className="font-display text-3xl font-bold text-secondary/20 transition-colors duration-700 group-hover:text-secondary/70">
             {project.name}
           </span>
         </div>
@@ -48,7 +48,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="bg-primary/5 px-2 py-1 font-body text-[10px] tracking-wide text-muted"
+              className="bg-primary/5 px-2 py-1 font-body text-[10px] tracking-wide text-muted transition-all duration-200 hover:bg-primary/20 hover:text-primary cursor-default"
             >
               {tag}
             </span>

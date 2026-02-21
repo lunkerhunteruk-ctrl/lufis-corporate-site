@@ -3,16 +3,13 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
-import InkBlot from "./InkBlot";
 
 export default function WorksSection() {
   return (
     <section
       id="works"
-      className="ink-texture relative overflow-hidden bg-cream py-32"
+      className="ink-texture relative overflow-hidden py-32" style={{ backgroundColor: "#E5D9C7" }}
     >
-      <InkBlot variant="top-right" className="w-[700px] h-[700px]" />
-
       <div className="section-content mx-auto max-w-6xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
